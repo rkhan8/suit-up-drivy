@@ -2,20 +2,53 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Drivy</title>
+    <link rel="stylesheet" type="text/css" href="StyleCSS.css">
+<!--
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap/css/bootstrap.min.css">
+-->
   </head>
   <body>
-    <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-    </div>
-    <div id="rental">
-      <input class="begin" type="date" placeholder="Rental begin date"/>
-      <input class="end" type="date" placeholder="Rental end date"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
+    <h2>Welcome to Drivy !</h2>
+    <table id=table>
+      <td>
+      <table id="table1">
+        <tr>
+          <td>
+            <div id="car">
+              <input class="model" type="text" placeholder="Car model"/>
+              <input class="price-by-day" type="number" placeholder="Price by day"/>
+              <input class="price-by-km" type="number" placeholder="Price by km"/>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div id="rental">
+              <input class="begin" type="date" placeholder="Rental begin date"/>
+              <input class="end" type="date" placeholder="Rental end date"/>
+              <input class="distance" type="number" placeholder="Distance in km"/>
+              <input class="option" type="checkbox" placeholder="Deductible option"/>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div id = "result" >
+              <button id="compute">Compute</button>
+            </div>
+          </td>
+       </tr>
+
+     </table>
+   </td>
+    </table>
+
+
     <div id="actors"></div>
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
