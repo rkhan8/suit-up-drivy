@@ -28,7 +28,7 @@
 					</th>
 
 					<th>
-					  <table id="table1" margin-left="20px" align="center">
+					  <table id="table1">
 						<tr>
 						  <td>
 							<div id="car">
@@ -40,14 +40,14 @@
 						</tr>
 						</table>
 						</br>
-						<table id="table2" align="center">
+						<table id="table2">
 						<tr>
 						  <td>
 							<div id="rental">
 							  <input class="begin" type="date" placeholder="Rental begin date"/>
 							  <input class="end" type="date" placeholder="Rental end date"/>
 							  <input class="distance" type="number" placeholder="Distance in km"/>
-							  <input class="option" type="checkbox" placeholder="Deductible option"/>
+							  <label>Deductible option : <input class="option" type="checkbox" placeholder="Deductible option"/></label>
 							</div>
 						  </td>
 						</tr>
@@ -57,7 +57,7 @@
 							<tr>
 								<td>
 								</br>
-									<button id="compute">Compute</button>
+									<button id="compute" onclick="scrollFunction();">Estimate</button>
 								</td>
 							</tr>
 						</table>
@@ -65,6 +65,16 @@
 
 				</table>
 			</div>
+
+
+      <script>
+        function scrollFunction()
+        {
+          document.getElementById( 'footer' ).scrollIntoView();
+          window.setTimeout( function () { top(); }, 2000 );
+        };
+
+      </script>
 
 			<div id="footer">
 				<footer>
@@ -74,7 +84,7 @@
 							  {{#actors}}
 								<div class="actor">
 								  <span>{{who}}</span>
-								  <span>{{type}}</span>
+								  <span>{{type}} :</span>
 								  <span>{{amount}}</span>
 								</div>
 							  {{/actors}}
