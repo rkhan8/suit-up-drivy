@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="CSS/index2CSS.css" />
+	</head>
+
+	<body>
+
+		<h2>Estimate your rental car</h2>
+
+
+		<div id="container">
+
+			<div id="body">
+				<table>
+
+					<th>
+						<table >
+							<tr>
+								<td>
+									<div class="carte">
+										<img class="homepage_car_map lazyloaded" data-srcset="https://d2y2masl4rtrav.cloudfront.net/assets/pages/homepage/map_FR-dbed41d7960676c5d9867a86602d7da403ba0a113b0abe8c0c128f814a1ad979.png 1x, https://d2y2masl4rtrav.cloudfront.net/assets/pages/homepage/map_FR@2x-19267983dfb67999fc2c9333fcfeb47f419f65ef51ce9915ba5d5fd6a8bfac27.png 2x" data-src="https://d2y2masl4rtrav.cloudfront.net/assets/pages/homepage/map_FR-dbed41d7960676c5d9867a86602d7da403ba0a113b0abe8c0c128f814a1ad979.png" src="https://d2y2masl4rtrav.cloudfront.net/assets/pages/homepage/map_FR-dbed41d7960676c5d9867a86602d7da403ba0a113b0abe8c0c128f814a1ad979.png" srcset="https://d2y2masl4rtrav.cloudfront.net/assets/pages/homepage/map_FR-dbed41d7960676c5d9867a86602d7da403ba0a113b0abe8c0c128f814a1ad979.png 1x, https://d2y2masl4rtrav.cloudfront.net/assets/pages/homepage/map_FR@2x-19267983dfb67999fc2c9333fcfeb47f419f65ef51ce9915ba5d5fd6a8bfac27.png 2x">
+									</div>
+								</td>
+							</tr>
+						</table>
+					</th>
+
+					<th>
+					  <table id="table1" margin-left="20px" align="center">
+						<tr>
+						  <td>
+							<div id="car">
+							  <input class="model" type="text" placeholder="Car model"/>
+							  <input class="price-by-day" type="number" placeholder="Price by day"/>
+							  <input class="price-by-km" type="number" placeholder="Price by km"/>
+							</div>
+						  </td>
+						</tr>
+						</table>
+						</br>
+						<table id="table2" align="center">
+						<tr>
+						  <td>
+							<div id="rental">
+							  <input class="begin" type="date" placeholder="Rental begin date"/>
+							  <input class="end" type="date" placeholder="Rental end date"/>
+							  <input class="distance" type="number" placeholder="Distance in km"/>
+							  <input class="option" type="checkbox" placeholder="Deductible option"/>
+							</div>
+						  </td>
+						</tr>
+						</table2>
+
+						<table id="table3" align="center">
+							<tr>
+								<td>
+								</br>
+									<button id="compute">Compute</button>
+								</td>
+							</tr>
+						</table>
+					</th>
+
+				</table>
+			</div>
+
+			<div id="footer">
+				<footer>
+					<H4>Details of your rental : </H4>
+					  <div id="actors"></div>
+							<script id="template" type="x-tmpl-mustache">
+							  {{#actors}}
+								<div class="actor">
+								  <span>{{who}}</span>
+								  <span>{{type}}</span>
+								  <span>{{amount}}</span>
+								</div>
+							  {{/actors}}
+							</script>
+				</footer>
+			</div>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+		<script src="drivy.js"></script>
+		<script src="index.js"></script>
+
+
+
+
+	</body>
+</html>
